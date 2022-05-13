@@ -6,26 +6,403 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>846</width>
-    <height>409</height>
+    <width>721</width>
+    <height>447</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string notr="true">UsrrerrBar</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QGroupBox" name="qgbGeneral">
+        <property name="minimumSize">
+         <size>
+          <width>320</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>General</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QFormLayout" name="formLayout">
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::ExpandingFieldsGrow</enum>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="qlText">
+             <property name="text">
+              <string>Text:</string>
+             </property>
+             <property name="buddy">
+              <cstring>qleText</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="qleText">
+             <property name="text">
+              <string>Userbars enjoyer</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="qcbScanlines"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="qlScanlines">
+             <property name="text">
+              <string>Scanlines:</string>
+             </property>
+             <property name="buddy">
+              <cstring>qcbScanlines</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="qcbShine">
+             <property name="text">
+              <string>Shiny</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="qcbBackdropType"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="qlBackdropType">
+             <property name="text">
+              <string>Backdrop:</string>
+             </property>
+             <property name="buddy">
+              <cstring>qcbBackdropType</cstring>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="qpbSaveImage">
+           <property name="text">
+            <string>Save image as…</string>
+           </property>
+           <property name="icon">
+            <iconset theme="document-save"/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,1">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="qgbBackdropSingleColour">
+          <property name="title">
+           <string>Single colour</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QFormLayout" name="formLayout_2">
+             <item row="0" column="0">
+              <widget class="QLabel" name="qlSingleColour">
+               <property name="text">
+                <string>Colour:</string>
+               </property>
+               <property name="buddy">
+                <cstring>qpbSingleColour</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="qpbSingleColour">
+               <property name="toolTip">
+                <string>Click here to set a colour</string>
+               </property>
+               <property name="text">
+                <string notr="true"/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="qgbBackdropGradient">
+          <property name="title">
+           <string>Gradient</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QFormLayout" name="formLayout_3">
+             <item row="0" column="0">
+              <widget class="QLabel" name="qlGradientColour1">
+               <property name="text">
+                <string>First colour:</string>
+               </property>
+               <property name="buddy">
+                <cstring>qpbGradientColour1</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="qpbGradientColour1">
+               <property name="toolTip">
+                <string>Click here to set a colour</string>
+               </property>
+               <property name="text">
+                <string notr="true"/>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="qlGradientColour2">
+               <property name="text">
+                <string>Second colour:</string>
+               </property>
+               <property name="buddy">
+                <cstring>qpbGradientColour2</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="qpbGradientColour2">
+               <property name="toolTip">
+                <string>Click here to set a colour</string>
+               </property>
+               <property name="text">
+                <string notr="true"/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="qgbBackdropImage">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="title">
+         <string>Image</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <layout class="QFormLayout" name="formLayout_4">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="qlChooseImage">
+           <property name="text">
+            <string>Image source:</string>
+           </property>
+           <property name="buddy">
+            <cstring>qpbChooseImage</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="qpbChooseImage">
+           <property name="text">
+            <string>Choose…</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="qlImageOffsetY">
+           <property name="text">
+            <string>Y offset:</string>
+           </property>
+           <property name="buddy">
+            <cstring>qsbImageOffsetY</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QSpinBox" name="qsbImageOffsetY">
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::PlusMinus</enum>
+             </property>
+             <property name="maximum">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="qhsImageOffsetY">
+             <property name="maximum">
+              <number>0</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="qlImageOffsetX">
+           <property name="text">
+            <string>X offset:</string>
+           </property>
+           <property name="buddy">
+            <cstring>qsbImageOffsetX</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QSpinBox" name="qsbImageOffsetX">
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::PlusMinus</enum>
+             </property>
+             <property name="maximum">
+              <number>350</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="qhsImageOffsetX">
+             <property name="maximum">
+              <number>350</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>846</width>
+     <width>721</width>
      <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="qdwPreview">
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllDockWidgetAreas</set>
+   </property>
+   <property name="windowTitle">
+    <string>Preview</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QGraphicsView" name="qgvPreview">
+         <property name="minimumSize">
+          <size>
+           <width>350</width>
+           <height>19</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>350</width>
+           <height>19</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
  </widget>
+ <tabstops>
+  <tabstop>qleText</tabstop>
+  <tabstop>qcbBackdropType</tabstop>
+  <tabstop>qcbScanlines</tabstop>
+  <tabstop>qcbShine</tabstop>
+  <tabstop>qpbSingleColour</tabstop>
+  <tabstop>qpbGradientColour1</tabstop>
+  <tabstop>qpbGradientColour2</tabstop>
+  <tabstop>qgbBackdropImage</tabstop>
+  <tabstop>qpbChooseImage</tabstop>
+  <tabstop>qsbImageOffsetX</tabstop>
+  <tabstop>qhsImageOffsetX</tabstop>
+  <tabstop>qsbImageOffsetY</tabstop>
+  <tabstop>qhsImageOffsetY</tabstop>
+  <tabstop>qgvPreview</tabstop>
+  <tabstop>qpbSaveImage</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

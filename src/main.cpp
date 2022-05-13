@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include <QFontDatabase>
 
 #include "config.h"
 
@@ -18,6 +19,8 @@ int main(int argc, char** argv)
         "%{if-debug}D%{endif}%{if-info}I%{endif}%{if-warning}W%{endif}%{if-critical}C%{endif}%{if-fatal}F%{endif}, "
         "[%{time yyyy-MM-ddTHH:mm:ss.zzz} #%{pid}] %{type} -- %{category}: %{message}"
     );
+
+    QFontDatabase::addApplicationFont(":/visitor.ttf");
 
     MainWindow w;
     w.show();
